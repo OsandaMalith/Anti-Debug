@@ -3,8 +3,7 @@
 /*
  * Author: Osanda Malith Jayathissa (@OsandaMalith)
  * Website: http://OsandaMalith.wordpress.com
- * Using ZwQueryInformationProcess we get the PEB Address and 
- * then we check the NtGlobalFlag bit to determine the process is being debugged or not.
+ * Using RtlGetNtGlobalFlags() kernel mode API we get the value of the NtGlobalFlag.
  */
 
 typedef ULONG_PTR(__stdcall * _RtlGetNtGlobalFlags)();
